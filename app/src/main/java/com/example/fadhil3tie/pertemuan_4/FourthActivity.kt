@@ -30,8 +30,9 @@ class FourthActivity : AppCompatActivity() {
         Log.e("Data Intent","Nama: $name , Usia: $age, Asal: $from")
 
         binding.btnToFourth.setOnClickListener {
-            val i = Intent(this@FourthActivity, MainActivity::class.java)
-            startActivity(i)
+//            val i = Intent(this@FourthActivity, MainActivity::class.java)
+//            startActivity(i)
+            finish()
         }
     }
 }
