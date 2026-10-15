@@ -3,13 +3,14 @@ package com.example.fadhil3tie
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.fadhil3tie.databinding.ActivityFourthBinding
 import com.example.fadhil3tie.databinding.ActivityMainBinding
 import com.example.fadhil3tie.pertemuan_4.FourthActivity
 import com.example.fadhil3tie.pertemuan_5.FifthActivity
+import com.example.fadhil3tie.pertemuan_6.AuthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -36,6 +37,25 @@ class MainActivity : AppCompatActivity() {
         binding.btnToFifth.setOnClickListener {
             val i = Intent(this@MainActivity, FifthActivity::class.java)
             startActivity(i)
+        }
+        binding.btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi Logout")
+                .setMessage("Apakah Anda yakin ingin keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Tidak") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
     }
 }
