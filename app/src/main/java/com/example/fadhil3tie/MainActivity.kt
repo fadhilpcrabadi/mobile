@@ -11,6 +11,7 @@ import com.example.fadhil3tie.databinding.ActivityMainBinding
 import com.example.fadhil3tie.pertemuan_4.FourthActivity
 import com.example.fadhil3tie.pertemuan_5.FifthActivity
 import com.example.fadhil3tie.pertemuan_6.AuthActivity
+import com.example.fadhil3tie.pertemuan_7.SevenActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,11 +39,15 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this@MainActivity, FifthActivity::class.java)
             startActivity(i)
         }
+        binding.btnToSeven.setOnClickListener {
+            val i = Intent(this@MainActivity, SevenActivity::class.java)
+            startActivity(i)
+        }
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin keluar?")
-                .setPositiveButton("Ya") { dialog, _ ->
+                .setPositiveButton("Ya") { _, _ ->
                     val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
                     val editor = sharedPref.edit()
                     editor.clear()
