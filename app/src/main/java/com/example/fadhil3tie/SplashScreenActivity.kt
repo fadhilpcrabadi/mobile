@@ -1,4 +1,4 @@
-package com.example.fadhil3tie.pertemuan_6
+package com.example.fadhil3tie
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.fadhil3tie.MainActivity
-import com.example.fadhil3tie.R
 import com.example.fadhil3tie.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

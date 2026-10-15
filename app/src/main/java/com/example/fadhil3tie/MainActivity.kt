@@ -8,10 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.fadhil3tie.databinding.ActivityMainBinding
-import com.example.fadhil3tie.pertemuan_4.FourthActivity
-import com.example.fadhil3tie.pertemuan_5.FifthActivity
-import com.example.fadhil3tie.pertemuan_6.AuthActivity
-import com.example.fadhil3tie.pertemuan_7.SevenActivity
+import com.example.fadhil3tie.Home.pertemuan_4.FourthActivity
+import com.example.fadhil3tie.Home.pertemuan_5.FifthActivity
+import com.example.fadhil3tie.Home.pertemuan_7.SevenActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
