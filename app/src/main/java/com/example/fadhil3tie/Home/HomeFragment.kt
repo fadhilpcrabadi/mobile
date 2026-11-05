@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fadhil3tie.AuthActivity
+import com.example.fadhil3tie.Home.Pertemuan_10.TenthActivity
 import com.example.fadhil3tie.Home.pertemuan_4.FourthActivity
 import com.example.fadhil3tie.Home.pertemuan_5.FifthActivity
 import com.example.fadhil3tie.Home.pertemuan_7.SevenActivity
@@ -50,6 +51,10 @@ class HomeFragment : Fragment() {
         }
         binding.btnToSeven.setOnClickListener {
             val i = Intent(requireContext(), SevenActivity::class.java)
+            startActivity(i)
+        }
+        binding.btnToTenth.setOnClickListener {
+            val i = Intent(requireContext(), TenthActivity::class.java)
             startActivity(i)
         }
 //        binding.btnLogout.setOnClickListener {
