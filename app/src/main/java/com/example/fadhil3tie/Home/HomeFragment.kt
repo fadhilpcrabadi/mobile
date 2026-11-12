@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fadhil3tie.AuthActivity
 import com.example.fadhil3tie.Home.Pertemuan_10.TenthActivity
+import com.example.fadhil3tie.Home.pertemuan_11.ElevenActivity
 import com.example.fadhil3tie.Home.pertemuan_4.FourthActivity
 import com.example.fadhil3tie.Home.pertemuan_5.FifthActivity
 import com.example.fadhil3tie.Home.pertemuan_7.SevenActivity
@@ -55,6 +56,10 @@ class HomeFragment : Fragment() {
         }
         binding.btnToTenth.setOnClickListener {
             val i = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(i)
+        }
+        binding.btnToEleven.setOnClickListener {
+            val i = Intent(requireContext(), ElevenActivity::class.java)
             startActivity(i)
         }
 //        binding.btnLogout.setOnClickListener {

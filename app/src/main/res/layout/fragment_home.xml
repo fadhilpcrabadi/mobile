@@ -11,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="160dp"
         android:background="@drawable/bg_header_wave"
+        android:backgroundTint="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,6 +84,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pertemuan 10"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/btnToEleven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pertemuan 11"
+            android:backgroundTint="#009688"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
