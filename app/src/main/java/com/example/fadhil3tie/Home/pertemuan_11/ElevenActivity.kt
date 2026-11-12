@@ -32,20 +32,23 @@ class ElevenActivity : AppCompatActivity() {
             when (position) {
                 0 -> {
                     tab.text = "Tab A"
-                    // Tambah Icon
                     tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_login)
-                    // Tambah Badge Tanpa nomor (hanya titik)
                     val badge = tab.orCreateBadge
                     badge.isVisible = true
                 }
                 1 -> {
                     tab.text = "Tab B"
-                    // Tambah Icon
                     tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_home)
-                    // Tambah Badge dengan nomor
                     val badge = tab.orCreateBadge
                     badge.isVisible = true
                     badge.number = 5
+                }
+                2 -> {
+                    tab.text = "Produk"
+                    tab.icon = ContextCompat.getDrawable(this, R.drawable.ic_link)
+                    val badge = tab.orCreateBadge
+                    badge.isVisible = true
+                    badge.number = 10
                 }
             }
         }.attach()

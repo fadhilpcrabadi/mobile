@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/yellow"
             android:text="Pertemuan 5"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
