@@ -1,7 +1,6 @@
 package com.example.fadhil3tie
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.fadhil3tie.Home.HomeFragment
 import com.example.fadhil3tie.Message.MessageFragment
 import com.example.fadhil3tie.More.MoreFragment
+import com.example.fadhil3tie.Note.NoteFragment
 import com.example.fadhil3tie.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class BaseActivity : AppCompatActivity() {
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right,0)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
         replaceFragment(HomeFragment())
@@ -29,6 +29,10 @@ class BaseActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home -> {
                     replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 R.id.message -> {
@@ -43,6 +47,7 @@ class BaseActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
